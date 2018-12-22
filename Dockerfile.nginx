@@ -1,0 +1,8 @@
+FROM nginx:alpine
+
+LABEL MAINTAINER="Teerapong Singthong <st.teerapong@gmail.com>"
+
+COPY ./sidecar/nginx.conf /etc/nginx/nginx.conf
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
